@@ -1,8 +1,19 @@
+/*
+| obj model represent model in mvc
+|--------------------------------------------
+| obj model generate random data from 1 to 6
+*/
 const model = {
   diceValue: function () {
     return Math.floor((Math.random() * 6) + 1)
   }
 }
+
+/*
+| obj controller represent controller in mvc
+|--------------------------------------------
+| obj controller get a request from view to do something
+*/
 
 const controller = {
   addDice: function () {
@@ -15,6 +26,11 @@ const controller = {
   }
 }
 
+/*
+| obj view represent view in mvc
+|-----------------------------------
+| obj view interactions with the user
+*/
 const view = {
   viewDiceAdd: function () {
     $('#roller button.add').on('click', function () {
@@ -32,4 +48,5 @@ const view = {
   }
 }
 
+/* call obj view */
 view.viewAll()
